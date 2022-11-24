@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cash Register Manager</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">CASH REGISTER MANAGER</h1>
+        <p id="description">Enter the bill amount and cash given by the customer and know the minimun number of notes of return.</p>
+
+        <!-- input -->
+        <div style="display: flex; flex-direction:column;">
+            <label for="bill-amount">Bill Amount: </label>
+            <input type="text" id="bill-amount" placeholder="Enter the bill amount.">
+            <button class="btn" id="next">NEXT</button>
+        </div>
+
+        <div class="cash-given-div">
+            <label for="cash-given">Cash Given: </label>
+            <input type="text" id="cash-given" placeholder="Enter the cash given.">
+            <button class="btn" id="check">Check</button>
+        </div>
+
+        <p id="display-msg">This is the display-msg</p>
+
+        <div id="change-table">
+            <table border=1 frame=void rules=rows>
+                <caption><h2>Return Change</h2></caption>
+                <br>
+                <tr>
+                    <th>No. of notes</th>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                    <td class="notes-to-be-returned">-</td>
+                </tr>
+                <tr>
+                    <th>Notes</th>
+                    <td>2000</td>
+                    <td>500</td>
+                    <td>200</td>
+                    <td>100</td>
+                    <td>50</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="index.js"></script>
+
+    
+</body>
+  
