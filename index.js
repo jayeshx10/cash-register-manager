@@ -32,25 +32,31 @@ function calculateChange(toBeReturnedMoney){
 
 function nextHandler(){
     if(bill_amount.value > 0){
+        display_msg.style.display = "none";
         cash_given_div.style.display = "flex";
         changeTable.style.display = "block";
+    }
+    else{
+        changeTable.style.display = "none";
+        showMessage("INVALID BILL AMOUNT");
     }
 }
 
 function checkHandler(){
     if(bill_amount.value > 0){
         if(Number(cash_given.value) >= Number(bill_amount.value)){
+            display_msg.style.display = "none";
             var toBeReturnedMoney = cash_given.value - bill_amount.value;
             calculateChange(toBeReturnedMoney);
         }
         else{
             changeTable.style.display = "none";
-            showMessage("Give us some more cash");
+            showMessage("INSUFFICIENT CASH RECEIVED");
         }
     }
     else{
         changeTable.style.display = "none";
-        showMessage("Invalid bill amount");
+        showMessage("INVALID BILL AMOUNT");
     }
 }
 
