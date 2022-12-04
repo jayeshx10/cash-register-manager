@@ -46,6 +46,7 @@ function checkHandler(){
     if(bill_amount.value > 0){
         if(Number(cash_given.value) >= Number(bill_amount.value)){
             display_msg.style.display = "none";
+            changeTable.style.display = "block";
             var toBeReturnedMoney = cash_given.value - bill_amount.value;
             calculateChange(toBeReturnedMoney);
         }

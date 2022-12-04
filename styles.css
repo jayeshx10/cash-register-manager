@@ -34,8 +34,8 @@ label{
 }
 
 input{
-    height: 5vh;
-    width: 12vw;
+    height: 1vh;
+    width: 11vw;
     margin: 1rem auto;
     text-align: center;
     border-radius: 0.8rem;
@@ -60,18 +60,18 @@ input{
 }    
 
 table{
-    border: 0.3rem solid black;
+    border: 0.1rem solid black;
     height: 20vh;
     width: 50vw;
     margin: 2rem auto;
 }
 
 th{
-    border: 0.3rem solid black;
+    border: 0.1rem solid black;
 }
 
 td{
-    border: 0.3rem solid black;
+    border: 0.1rem solid black;
     text-align: center;
     width: 3.9rem;
     margin: 0;

@@ -10,18 +10,19 @@
 <body>
     <div class="container">
         <h1 id="title">CASH REGISTER MANAGER</h1>
+        <br>
         <p id="description">Enter the bill amount and cash given by the customer and know the minimun number of notes of return.</p>
 
         <!-- input -->
         <div style="display: flex; flex-direction:column;">
             <label for="bill-amount">Bill Amount: </label>
-            <input type="text" id="bill-amount" placeholder="Enter the bill amount.">
+            <input type="number" id="bill-amount" min="0" placeholder="Enter the bill amount">
             <button class="btn" id="next">NEXT</button>
         </div>
 
         <div class="cash-given-div">
             <label for="cash-given">Cash Given: </label>
-            <input type="text" id="cash-given" placeholder="Enter the cash given.">
+            <input type="number" id="cash-given" min="0" placeholder="Enter the cash given">
             <button class="btn" id="check">Check</button>
         </div>
 
@@ -30,7 +31,6 @@
         <div id="change-table">
             <table border=1 frame=void rules=rows>
                 <caption><h2>Return Change</h2></caption>
-                <br>
                 <tr>
                     <th>No. of notes</th>
                     <td class="notes-to-be-returned">-</td>
