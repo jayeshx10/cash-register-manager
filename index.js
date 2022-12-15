@@ -44,11 +44,15 @@ function nextHandler(){
 
 function checkHandler(){
     if(bill_amount.value > 0){
-        if(Number(cash_given.value) >= Number(bill_amount.value)){
+        if(Number(cash_given.value) > Number(bill_amount.value)){
             display_msg.style.display = "none";
             changeTable.style.display = "block";
             var toBeReturnedMoney = cash_given.value - bill_amount.value;
             calculateChange(toBeReturnedMoney);
+        }
+        else if(Number(cash_given.value) === Number(bill_amount.value)){
+            changeTable.style.display = "none";
+            showMessage("Bill amount and cash amount are same");
         }
         else{
             changeTable.style.display = "none";
@@ -61,7 +65,8 @@ function checkHandler(){
     }
 }
 
-check_btn.addEventListener('click', checkHandler);
 next_btn.addEventListener('click', nextHandler);
+check_btn.addEventListener('click', checkHandler);
+
 
 
